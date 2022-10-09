@@ -30,10 +30,13 @@
     </template>
   </t-head-menu>
 
-        <t-card bordered :style="{ width: '200px',height:'200px' }" v-for="item of 12" :key="item"> infoMessage </t-card>
-
+  <t-card bordered :style="{ width: '200px',height:'200px' }" v-for="item of 12" :key="item">
+    <span class="test">infoMessage</span>
+  </t-card>
 </template>
 
 <style lang="scss">
-
+ .test{
+   color: $injectedColor;
+ }
 </style>

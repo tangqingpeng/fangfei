@@ -20,9 +20,21 @@ export default defineConfig({
       })],
     }),
   ],
+  server:{
+    host:'0.0.0.0'
+  },
   resolve:{
     alias:{
       "@":path.resolve(__dirname,"src")
     }
-  },  
+  },
+
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `$injectedColor: orange;
+        @import "@/assets/css/global.scss";`
+      }
+    }
+  }
 })
